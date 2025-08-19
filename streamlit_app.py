@@ -34,7 +34,9 @@ if INGREDIENTS_LIST:
         session.sql(my_insert_stmt).collect()
     #st.write(my_insert_stmt)
         st.success(f'Your smoothie is ordered!,{Name_on_order}',icon="✅")
-    
 
+import requests
+smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+st.text(smoothiefroot_response)
 
     
